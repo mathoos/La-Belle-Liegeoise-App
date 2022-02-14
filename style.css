@@ -1,0 +1,335 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Calibri';
+    background-color: #FFE4C4;
+}
+
+
+
+/* Nav */
+
+nav{
+    display: flex;
+
+    width: 100%;
+    height: 25vh;
+    background-color: #FFE4C4;
+
+}
+#arrow{
+    width: 2em;
+    height: 2em;
+    transform: rotate(180deg);
+    background-color: white;
+
+}
+#arrow img{
+    width: 100%;
+    height: 100%
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 5em;
+    background-color: #F1F1F1;
+    border-radius: 70px 70px 0 0;
+    color: rgb(88, 64, 48);
+}
+
+/* Logo composition gaufre */
+
+#logo-compose{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: fit-content;
+    transform: translateY(-50%) translateX(50%)
+}
+#logo-compose img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+#description{
+    width: 50%;
+    margin: auto;
+    transform: translateY(-90%);
+
+}
+#description h1{
+    text-align: center;
+    font-family: "Haarlem Deco DEMO";
+}
+#blabla{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 80%;
+    height: 3em
+}
+.description-blabla{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+}
+
+.picto-blala{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.picto-blala img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+.donnees{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+.donnees p{
+    margin: 0;
+    font-size: .8em;
+}
+
+
+
+
+
+
+
+
+
+.bloc{
+    width: 95%;
+    height: 13em;
+    margin: auto;
+    margin-bottom: 5em;
+}
+.up{
+    display: flex;
+    height: 3em;
+    width: 100%;
+    border-radius: 100% 0% 11% 89% / 100% 100% 0% 0%;
+    text-transform: uppercase;
+    background-color: #f0cb65;
+    font-family: "Haarlem Deco DEMO";
+    letter-spacing: 1px;
+}
+.numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 3em;
+   
+}
+.numero p{
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+.titre{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left:  2%;
+    font-weight: bolder;
+    font-size: 2em;
+}
+.down{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10em;
+    padding-left: 3em;
+    overflow: scroll;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+ul{
+    display: flex;
+    align-items: center;
+    height: 90%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 7.5em;
+    height: 7.5em;
+    border: 1px solid rgb(175, 135, 102);
+    border-radius: 20px;
+    cursor: pointer;
+   
+}
+.image-ingredient{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+.image-ingredient img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+.titre-ingredient{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+}
+.titre-ingredient p{
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 1px; 
+    font-size: .8em;
+    transition: .3s ease;  
+    margin: 0;
+    padding: 0;
+}
+
+
+li:not(:last-child){
+    margin-right: 2.5em;
+}
+
+
+.active, .active2, .active3, .active4{
+    background-color: #f1ce8e;
+}
+
+
+
+
+/* Panier */
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 23em;
+    border-radius:  70px;
+
+    margin-bottom: 10em;
+    transform: translateY(-15%);
+    z-index :2;
+    background-color: #FFE4C4;
+
+}
+#gaufre-finale{
+    width: 25%;
+}
+#image-fleche{
+    width: 150%;
+    transform: translateY(-15%) rotate(20deg)
+}
+#image-fleche img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#panier{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 25em;
+    border-radius: 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+#up{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    margin-bottom: 1em;
+    
+}
+h3{
+    padding: 0;
+    margin: 0;
+    font-weight: bolder;
+    font-family: "Haarlem Deco DEMO";
+    font-size: 3em;
+}
+#down{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+.bloc-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 4em;
+    text-align: right; 
+}
+.bloc-cart:nth-child(3){
+    margin-bottom: 1em;
+    border-bottom: 1px solid black;
+}
+
+.bloc-cart-titre{
+    width: 50%;
+    height: 30%;
+    
+}
+
+.bloc-cart-titre p{
+    font-weight: bolder;
+    margin: 0;
+}
+#cart1, #cart2, #cart3, #cart4{
+    width: 100%;
+    height: 30%;
+    font-size: .9em;
+}
+#cart2bis{
+    width: 100%;
+    height: 15%;
+    background-color: yellow;
+}
+#logo-down{
+    position: absolute;
+    width: 70%;
+    bottom: -20%;
+    left: -10%;
+}
