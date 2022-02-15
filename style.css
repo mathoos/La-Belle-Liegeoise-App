@@ -13,7 +13,7 @@
 body{
     margin: 0;
     font-family: 'Calibri';
-    background-color: #FFE4C4;
+    background-color: rgb(104, 85, 72);
 }
 
 /* Nav */
@@ -23,7 +23,7 @@ nav{
     justify-content: space-between;
     width: 100%;
     height: 25vh;
-    background-color: #FFE4C4;
+    background-color: rgb(104, 85, 72);
 
 }
 #arrow{
@@ -53,14 +53,17 @@ nav{
 /* HEADER */
 
 header{
+    position: relative;
+    z-index: 5;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding-bottom: 5em;
-    background-color: #F1F1F1;
-    border-radius: 70px 70px 0 0;
+    background-color: #fff2d5;
+    border-radius: 100px 100px 100px 100px;
     color: rgb(88, 64, 48);
+
 }
 
 /* Logo composition gaufre */
@@ -150,22 +153,33 @@ hr{
     background-color: rgb(88, 64, 48);
 }
 
+
+
+
+
 .bloc{
-    width: 95%;
+    width: 100%;
     height: 13em;
     margin: auto;
     margin-bottom: 5em;
+
+}
+.bloc:last-child{
+    margin-bottom: 7em
 }
 .up{
     display: flex;
     height: 3em;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     text-transform: uppercase;
     color: #f1ce8e;
     font-family: 'haarlem_deco_demoregular';
     letter-spacing: 1px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 50px;
+
     background-color: rgb(88, 64, 48);
+    padding-left: 2.5%;
 }
 .numero{
     display: flex;
@@ -194,7 +208,6 @@ hr{
     align-items: center;
     width: 100%;
     height: 10em;
-    padding-left: 3em;
     overflow: scroll;
 
 }
@@ -204,10 +217,12 @@ hr{
 ul{
     display: flex;
     align-items: center;
-    height: 90%;
+    height: 100%;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    padding-left: 2.5%;
+   
 
 }
 li{
@@ -220,6 +235,7 @@ li{
     border-radius: 30px;
     cursor: pointer;
     transition: .5s ease;
+    border: 0.2px solid rgb(88, 64, 48)
    
 }
 .image-ingredient{
@@ -230,8 +246,8 @@ li{
     height: 70%;
 }
 .image-ingredient img{
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
 }
 .titre-ingredient{
@@ -258,34 +274,20 @@ li:not(:last-child){
 
 
 .active, .active2, .active3, .active4{
-    background-color: #f1ce8e;
+    background-color: #ffcf76;
+    border: none;
 }
 
-
-
-
-/* Panier */
-
-footer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 23em;
-    border-radius:  70px;
-    color: rgb(88, 64, 48);
-
-    margin-bottom: 10em;
-    transform: translateY(-15%);
-    z-index :2;
-    background-color: #FFE4C4;
-
-}
 #gaufre-finale{
+    position: absolute;
+    left: 10%;
+    bottom: -8%;
     width: 25%;
 }
 #image-fleche{
-    width: 150%;
-    transform: translateY(-15%) rotate(20deg)
+    width: 100%;
+    transform: rotate(20deg);
+    
 }
 #image-fleche img{
     width: 100%;
@@ -293,23 +295,50 @@ footer{
     object-fit: contain;
 }
 
+
+/* Panier */
+
+footer{
+    
+    width: 100%;
+    color: rgb(104, 85, 72);
+    background-color: #f7d8b0;
+    padding-top: 15em;
+    transform: translateY(-12em);
+    background-image: url(./pictogrammes/gaufrerotate.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 100%;
+    background-size: 140%;
+
+    
+
+}
+
+
 #panier{
     display: flex;
-    flex-direction: column;
-    width: 70%;
+    position: relative;
+    width: 100%;
     height: 25em;
-    border-radius: 50px;
-    overflow: hidden;
-    box-sizing: border-box;
+
     
+    
+}
+#panier img{
+    
+
+
+}
+#commande{
+    position: absolute;
+    width: 90%;
 }
 #up{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 80%;
+    width: 100%;
     height: 20%;
-    margin: auto;
     margin-bottom: 1em;
     
 }
@@ -326,7 +355,7 @@ h3{
     flex-direction: column;
     align-items: center;
     margin: auto;
-    width: 80%;
+    width: 100%;
     height: 80%;
 }
 .bloc-cart{
@@ -334,12 +363,11 @@ h3{
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    height: 4em;
+    height: 3em;
     text-align: right; 
 }
 .bloc-cart:nth-child(3){
     margin-bottom: 1em;
-    border-bottom: 1px solid black;
 }
 
 .bloc-cart-titre{
@@ -356,15 +384,4 @@ h3{
     width: 100%;
     height: 30%;
     font-size: .9em;
-}
-#cart2bis{
-    width: 100%;
-    height: 15%;
-    background-color: yellow;
-}
-#logo-down{
-    position: absolute;
-    width: 70%;
-    bottom: -20%;
-    left: -10%;
 }
