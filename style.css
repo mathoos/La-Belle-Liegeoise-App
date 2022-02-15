@@ -13,7 +13,7 @@
 body{
     margin: 0;
     font-family: 'Calibri';
-    background-color: #f3d1a5;
+    background-color: rgb(255, 222, 173);
 }
 
 /* Nav */
@@ -23,7 +23,7 @@ nav{
     justify-content: space-between;
     width: 100%;
     height: 25vh;
-    background-color: #f3d1a5;
+    background-color: rgb(255, 222, 173);
 
 }
 #arrow{
@@ -60,7 +60,7 @@ header{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    background-color: #fcf4e4;
+    background-color: #F1F1F1;
     border-radius: 100px 100px 100px 100px;
     color: rgb(88, 64, 48);
 
@@ -75,7 +75,7 @@ header{
     align-items: center;
     width: 50%;
     height: fit-content;
-    transform: translateY(-50%) translateX(50%)
+    transform: translateY(-50%) translateX(50%);
 }
 #logo-compose img{
     width: 80%;
