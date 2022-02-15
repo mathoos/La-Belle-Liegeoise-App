@@ -1,17 +1,25 @@
 
 
+
+
+
+
+
 // CHOIX 1
 
 let un = document.getElementById("un");
 let li1 = un.querySelectorAll("ul > li");
 let cart1 = document.getElementById("cart1");
+let span1 = un.querySelectorAll("li1 > span");
+
 
 // On fait une boucle pour attribuer la classe active sur le bouton sélectionné
 for (var i = 0; i < li1.length; i++) {
-  li1[i].addEventListener("click", function() {
-    
-    var active = document.getElementsByClassName("active");
+  li1[i].addEventListener("click", active)
+}
 
+function active(){
+  var active = document.getElementsByClassName("active");
     // Si la classe active n'est pas déjà associée à une balise
     if (active.length > 0) {
       active[0].className = active[0].className.replace(" active", "");
@@ -20,9 +28,7 @@ for (var i = 0; i < li1.length; i++) {
     // On ajoute la class active au bouton sur lequel on clique
     this.className += " active";
     cart1.textContent = this.innerText
-
-    
-  });
+   
 }
 
 

@@ -14,7 +14,7 @@ body{
     margin: 0;
     font-family: 'Calibri';
     background-color: rgb(255, 222, 173);
-    /*background-color: #F6C68D;*/
+    background-color: #F6C68D;
 }
 
 /* Nav */
@@ -25,6 +25,7 @@ nav{
     width: 100%;
     height: 25vh;
     background-color: rgb(255, 222, 173);
+    background-color: #F6C68D;
 
 }
 #arrow{
@@ -88,6 +89,7 @@ header{
     width: 50%;
     height: fit-content;
     transform: translateY(-50%) translateX(50%);
+
 }
 #logo-compose img{
     width: 80%;
@@ -185,13 +187,8 @@ hr{
     height: 3em;
     width: 95%;
     margin: auto;
-    text-transform: uppercase;
-    color: rgb(104, 85, 72);
-    font-family: 'haarlem_deco_demoregular';
-    letter-spacing: 1px;
-    border-radius: 50px 50px 0 0;
-
-
+    border-bottom: 1px solid rgb(88, 64, 48);
+    border-top: 1px solid rgb(88, 64, 48);
     padding-left: 2.5%;
 }
 .numero{
@@ -218,6 +215,8 @@ hr{
 h2{
     font-weight: bolder;
     font-size: 1.8em;
+    font-family: 'Times New Roman';
+    color: rgb(88, 64, 48);
     
 
 }
@@ -227,6 +226,8 @@ h2{
     width: 100%;
     height: 10em;
     overflow: scroll;
+
+    
 
 }
 ::-webkit-scrollbar {
@@ -240,6 +241,7 @@ ul{
     padding: 0;
     margin: 0;
     padding-left: 2.5%;
+    
    
 
 }
@@ -253,6 +255,7 @@ li{
     border-radius: 30px;
     cursor: pointer;
     transition: .5s ease;
+    overflow: hidden;
     
    
 }
@@ -270,6 +273,7 @@ li{
 }
 .titre-ingredient{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -284,7 +288,13 @@ li{
     margin: 0;
     padding: 0;
 }
+.titre-ingredient span{
 
+    font-size: .6em;
+    font-style: italic;
+    letter-spacing: 0;
+    font-weight: lighter;
+}
 
 li:not(:last-child){
     margin-right: 2.5em;
@@ -318,7 +328,12 @@ footer{
     height: 20em;
     width: 100%;
     color: rgb(104, 85, 72);
-    background-color: #F6C68D
+    background-color: #F6C68D;
+    background-image: url(./pictogrammes/logo.svg);
+    background-repeat: no-repeat;
+    background-position: -30% 140%;
+    background-size: 60%;
+
 
      
 }
