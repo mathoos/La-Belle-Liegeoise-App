@@ -14,6 +14,7 @@ body{
     margin: 0;
     font-family: 'Calibri';
     background-color: rgb(255, 222, 173);
+    /*background-color: #F6C68D;*/
 }
 
 /* Nav */
@@ -55,7 +56,6 @@ nav{
 header{
     position: relative;
     z-index: 5;
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,13 +63,18 @@ header{
     background-color: #fff9eb;
     border-radius: 100px 100px 0 0;
     color: rgb(88, 64, 48);
-    background-image: url(./pictogrammes/Union.svg);
-    background-repeat: no-repeat;
-
-    
-    background-size: 100%;
-    background-position: bottom;
-
+}
+#lavague{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 5em;
+    background: linear-gradient(#fff9eb 99%, #F6C68D 1%)
+}
+#lavague img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
 }
 
@@ -213,6 +218,7 @@ hr{
 h2{
     font-weight: bolder;
     font-size: 1.8em;
+    
 
 }
 .down{
@@ -286,7 +292,7 @@ li:not(:last-child){
 
 
 .active, .active2, .active3, .active4{
-    background-color:#f3d1a5;
+    background-color: #F6C68D;
     border: none;
 }
 
@@ -294,25 +300,22 @@ li:not(:last-child){
 #image-fleche{
     position: absolute;
     left: 10%;
-    bottom: -8%;
+    bottom: -12%;
     width: 30%;
-    transform: rotate(180deg);
+    transform: rotate(-10deg);
     
 }
 #image-fleche img{
     width: 80%;
-    height: 100%;
-    object-fit: contain;
+    height: 10%;
+
 }
 
 
 /* Panier */
 
 footer{
-    display: flex;
-    justify-content: right;
-    align-items: flex-end;
-    height: 27em;
+    height: 20em;
     width: 100%;
     color: rgb(104, 85, 72);
     background-color: #F6C68D
@@ -325,9 +328,9 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 25em;  
+    margin: auto;
+    width: 80%;
+    height: 20em;  
     
 }
 
