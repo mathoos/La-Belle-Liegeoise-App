@@ -89,7 +89,8 @@ header{
     transform: translateY(-90%);
 
 }
-#description h1{
+h1{
+    font-size: 2.2em;
     text-align: center;
     font-family: 'haarlem_deco_demoregular';
 }
@@ -190,7 +191,7 @@ hr{
    
 }
 .numero p{
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bolder;
     margin: 0;
     padding: 0;
@@ -200,8 +201,12 @@ hr{
     align-items: center;
     height: 100%;
     margin-left:  2%;
+    
+}
+h2{
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 1.8em;
+
 }
 .down{
     display: flex;
@@ -299,36 +304,32 @@ li:not(:last-child){
 /* Panier */
 
 footer{
-    
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    height: 27em;
     width: 100%;
     color: rgb(104, 85, 72);
-    background-color: #f7d8b0;
-    padding-top: 15em;
-    transform: translateY(-12em);
-    background-image: url(./pictogrammes/gaufrerotate.svg);
-    background-repeat: no-repeat;
-    background-position: 10% 100%;
-    background-size: 140%;
-
-    
-
+    background-color: #ffb350;
+     
 }
 
 
 #panier{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
-    width: 100%;
-    height: 25em;
-
+    width: 55%;
+    height: 25em;  
+    padding: 5%;
+    background-image: url(./pictogrammes/gaufrerotate.svg);
+    background-repeat: no-repeat;
     
+    background-size: cover;
     
 }
 
-#commande{
-    position: absolute;
-    width: 90%;
-}
 #up{
     display: flex;
     align-items: center;
@@ -343,41 +344,46 @@ h3{
     margin: 0;
     font-weight: bolder;
     font-family: 'haarlem_deco_demoregular';
-    font-size: 2.5em;
+    font-size: 2.2em;
+
 }
 #down{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
     width: 100%;
-    height: 80%;
+    height: 55%;
+
 }
 .bloc-cart{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    height: 3em;
-    text-align: right; 
+    height: 33%;
 }
 .bloc-cart:nth-child(3){
     margin-bottom: 1em;
 }
 
 .bloc-cart-titre{
+    display: flex;
+    align-items:center;
+    justify-content: right;;
     width: 50%;
-    height: 30%;
+    height: 35%;
+
     
 }
 
 .bloc-cart-titre p{
     font-weight: bolder;
-    margin: 0;
+    margin: 0.1em;
 }
 #cart1, #cart2, #cart3, #cart4{
     width: 100%;
-    height: 30%;
+    height: 65%;
     font-size: .9em;
+    text-align: right;;
 }
