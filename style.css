@@ -110,6 +110,9 @@ h1{
     text-align: center;
     font-family: 'haarlem_deco_demoregular';
 }
+#description p{
+    text-align: center;
+}
 #blabla{
     display: flex;
     justify-content: space-between;
@@ -132,8 +135,8 @@ h1{
     height: 60%;
 }
 .picto-blala img{
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     object-fit: contain;
 }
 .donnees{
@@ -153,9 +156,23 @@ h1{
 
 
 
+.flechePoint{
+    width: 100%;
+    height: 10em;
+}
 
-
-
+.flechePoint img{
+    width: 10%;
+    height: 100%;
+    float: right;
+    margin-right: 20%;
+    transform: rotate(-40deg);
+}
+#ah{
+    margin-left:  20%;
+    float: left;
+    transform: rotate(50deg);
+}
 
 
 
@@ -163,9 +180,8 @@ h1{
     width: 100%;
     height: 13em;
     margin: auto;
-    margin-bottom: 5em;
-
 }
+
 .bloc:last-child{
     margin-bottom: 7em
 }
@@ -235,6 +251,7 @@ ul{
 
 }
 li{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -244,11 +261,19 @@ li{
     border-radius: 30px;
     cursor: pointer;
     transition: .5s ease;
-    overflow: hidden;
-    border: 1px solid #572713
-    
-    
-   
+
+}
+li:not(:last-child){
+    margin-right: 2.5em;
+}
+li::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 8.75em;
+    background-color: #572713
 }
 .image-ingredient{
     display: flex;
@@ -287,13 +312,11 @@ li{
     font-weight: lighter;
 }
 
-li:not(:last-child){
-    margin-right: 2.5em;
-}
+
 
 
 .active, .active2, .active3, .active4{
-    background-color: #D19780;
+    background-color: #f6c78da4;
     border: none;
 }
 
