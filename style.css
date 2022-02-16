@@ -102,16 +102,22 @@ header{
 #description{
     width: 50%;
     margin: auto;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
+   
 
 }
 h1{
-    font-size: 2em;
+    font-size: 1.8em;
     text-align: center;
     font-family: 'haarlem_deco_demoregular';
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 #description p{
     text-align: center;
+    font-size: .8em;
+    margin: 0;
+   
 }
 #blabla{
     display: flex;
@@ -153,7 +159,60 @@ h1{
 
 
 
+#flash{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 5em;
+    margin: auto;
+    margin-bottom: 4em;
+    border-left: none;
+    
 
+    
+}
+#flash::after{
+    position: absolute;
+    content: '';
+    width: 70%;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+
+}
+#flash::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 100%;;
+    bottom: -20%;
+    right: 5%;
+}
+#flash img{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: -5%;
+    top: -50%;
+    transform: rotate(10deg);
+
+
+}
+#flash p{
+    width: 80%;
+    font-size: .8em;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    border-radius: 48% 52% 48% 52% / 50% 68% 32% 50%;
+
+    border-left: none;
+    border-bottom: none;
+
+
+}
 
 
 .flechePoint{
@@ -168,6 +227,9 @@ h1{
     margin-right: 20%;
     transform: rotate(-40deg);
 }
+
+
+
 #ah{
     margin-left:  20%;
     float: left;
