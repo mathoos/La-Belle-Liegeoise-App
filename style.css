@@ -216,11 +216,16 @@ h1{
 
 }
 
-.pate img{
-    width: 40%;
-    height: fit-content;
-    margin-top: 3%;
-    margin-left: 13%;
+.pate p{
+    font-size: 1em;
+    font-weight: lighter;
+    font-style: italic;
+    width: fit-content;
+    margin-top: 10%;
+    margin-left: 10%;
+
+
+
 
 
 }
