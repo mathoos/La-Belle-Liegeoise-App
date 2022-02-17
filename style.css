@@ -418,7 +418,7 @@ li::after{
 
 
 
-.active, .active2, .active3, .active4{
+.active{
     background-color: #f6c78da4;
     border: none;
 }
