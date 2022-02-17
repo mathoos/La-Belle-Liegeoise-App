@@ -26,15 +26,15 @@ nav{
     width: 100%;
     height: 20vh;
     background-color: #572713;
-    transform: translateY(-50%);
-    animation: slideDown .5s ease forwards 1s
+    /*transform: translateY(-50%);
+    animation: slideDown .5s ease forwards 1s*/
 
 }
-@keyframes slideDown{
+/*@keyframes slideDown{
     to{
         transform: translateY(0)
     }
-}
+}*/
 #arrow{
     width: 1.7em;
     height: 1.7em;
@@ -72,15 +72,15 @@ header{
     border-radius: 100px 100px 0 0;
     border-top: dotted #572713 2px;
     box-sizing: border-box;
-    transform: translateY(100%);
+    /*transform: translateY(100%);
     animation: slide .8s ease forwards;
-    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);*/
 }
-@keyframes slide{
+/*@keyframes slide{
     to{
         transform: translateY(0)
     }
-}
+}*/
 #lavague{
     display: flex;
     align-items: flex-end;
@@ -308,16 +308,24 @@ h1{
 .titre{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     height: 100%;
-    margin-left:  2%;
+    
     
 }
 h2{
     font-weight: bolder;
     font-size: 1.5em;
     font-family: 'Times New Roman';
-    
-    
+
+}
+.titre p{
+    font-style: italic;
+    font-size: .8em;
+    transform: rotate(4deg);
+    margin-right: 5%;
+    background-color: #F6C68D;
 
 }
 .down{
@@ -579,4 +587,24 @@ h3{
 
     height: 50%;
     object-fit: contain;
+}
+
+
+main{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 50%;
+    background-color: white;
+    border: black 5px solid;;
+}
+.cart-row{
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 5em;
+    background-color: orange;
+    border: 2px solid red
 }
