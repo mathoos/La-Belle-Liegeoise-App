@@ -36,12 +36,9 @@ for (var i = 0; i < li1.length; i++) {
   
   li1[i].addEventListener('click', function() {
     var active = document.getElementsByClassName("active");
-    // Si la classe active n'est pas déjà associée à une balise
     if (active.length > 0) {
       active[0].className = active[0].className.replace(" active", "");
     }
-
-    // On ajoute la class active au bouton sur lequel on clique
     this.className += " active";
     ajout()
   }) 
@@ -51,9 +48,7 @@ function ajout() {
   var button = li1[i]
     var button = event.target
     var shopItem = button.parentElement.parentElement
-    console.log(shopItem)
     var title = shopItem.getElementsByClassName("prout")[0].innerText
-    console.log(title)
     ajoutCart(title)
 }
 
@@ -79,12 +74,12 @@ var li2 = deux.querySelectorAll("ul > li");
 
 for (var i = 0; i < li2.length; i++) {
   li2[i].addEventListener('click', function() {
-    var active = document.getElementsByClassName("active");
-    if (active.length > 2) {
-      this.classList = this.classList.remove("active");  
+    var active2 = document.getElementsByClassName("active2");
+    if (active2.length > 2) {
+      this.classList = this.classList.remove("active2");  
     return;  
     }
-    this.classList.toggle("active");
+    this.classList.toggle("active2");
     ajout2()
   }) 
 }
@@ -126,11 +121,11 @@ var li3 = trois.querySelectorAll("ul > li");
 for (var i = 0; i < li3.length; i++) {
   
   li3[i].addEventListener('click', function() {
-    var active = document.getElementsByClassName("active");
-    if (active.length > 0) {
-      active[0].className = active[0].className.replace(" active", "");
+    var active3 = document.getElementsByClassName("active3");
+    if (active3.length > 0) {
+      active3[0].className = active3[0].className.replace(" active3", "");
     }
-    this.className += " active";
+    this.className += " active3";
     ajout3()
   }) 
 }
@@ -139,9 +134,7 @@ function ajout3() {
   var button = li3[i]
     var button = event.target
     var shopItem = button.parentElement.parentElement
-    console.log(shopItem)
     var title = shopItem.getElementsByClassName("prout")[0].innerText
-    console.log(title)
     ajoutCart3(title)
 }
 
@@ -158,29 +151,5 @@ function ajoutCart3(title) {
 
 }
 
-/*
-// CHOIX 3 : LE CHOCOLAT
 
-let trois = document.getElementById("trois");
-let li3 = trois.querySelectorAll("ul > li");
-let cart3 = document.getElementById("cart3");
-
-// On fait une boucle pour attribuer la classe active sur le bouton sélectionné
-for (var i = 0; i < li3.length; i++) {
-  li3[i].addEventListener("click", function() {
-    var active = document.getElementsByClassName("active3");
-
-    // Si la classe active n'est pas déjà associée à une balise :
-    if (active.length > 0) {
-      active[0].className = active[0].className.replace(" active3", "");
-    }
-
-    // On ajoute la class active au bouton sur lequel on clique
-    this.className += " active3";
-    cart3.textContent = this.innerText
-  });
-}
-
-
-*/
 
