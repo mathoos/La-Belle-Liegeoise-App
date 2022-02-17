@@ -66,9 +66,6 @@ function ajoutCart(title) {
     `
     cartRow.innerHTML = cartRowContents
     cart1.textContent = cartRow.innerText
-    /* cartItems.append(cartRow) 
-    Utiliser la méthode append pour le bloc deux pour autoriser
-    sélectionner plusieurs div */
 
 }
 
@@ -79,33 +76,30 @@ function ajoutCart(title) {
 var deux = document.getElementById("deux");
 var li2 = deux.querySelectorAll("ul > li");
 
-// On fait une boucle pour attribuer la classe active sur le bouton sélectionné
+
 for (var i = 0; i < li2.length; i++) {
-  
   li2[i].addEventListener('click', function() {
     var active = document.getElementsByClassName("active");
-    // Si la classe active n'est pas déjà associée à une balise
     if (active.length > 2) {
       this.classList = this.classList.remove("active");  
     return;  
     }
-    // On ajoute la class active au bouton sur lequel on clique
     this.classList.toggle("active");
-    ajout()
+    ajout2()
   }) 
 }
 
-function ajout() {
+function ajout2() {
   var button = li2[i]
     var button = event.target
     var shopItem = button.parentElement.parentElement
     console.log(shopItem)
     var title = shopItem.getElementsByClassName("prout")[0].innerText
     console.log(title)
-    ajoutCart(title)
+    ajoutCart2(title)
 }
 
-function ajoutCart(title) {
+function ajoutCart2(title) {
     var cartRow = document.createElement('div')
     var cart2 = document.getElementById('cart2')
     var cartRowContents = 
@@ -114,14 +108,57 @@ function ajoutCart(title) {
     `
     cartRow.innerHTML = cartRowContents
     cart2.textContent = cartRow.innerText
-    /*cart2.append(cartRow) */
-    /*Utiliser la méthode append pour le bloc deux pour autoriser
+    /*cart2.append(cartRow) 
+    Utiliser la méthode append pour le bloc deux pour autoriser
     sélectionner plusieurs div */
 
 }
 
 
 
+
+//CHOIX 3 : CHOCOLAT
+
+var trois = document.getElementById("trois");
+var li3 = trois.querySelectorAll("ul > li");
+
+
+for (var i = 0; i < li3.length; i++) {
+  
+  li3[i].addEventListener('click', function() {
+    var active = document.getElementsByClassName("active");
+    if (active.length > 0) {
+      active[0].className = active[0].className.replace(" active", "");
+    }
+    this.className += " active";
+    ajout3()
+  }) 
+}
+
+function ajout3() {
+  var button = li3[i]
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    console.log(shopItem)
+    var title = shopItem.getElementsByClassName("prout")[0].innerText
+    console.log(title)
+    ajoutCart3(title)
+}
+
+function ajoutCart3(title) {
+    var cartRow = document.createElement('div')
+    var cart3 = document.getElementById('cart3')
+    var cartRowContents = 
+    `
+      <span>${title}</span>    
+    `
+    cartRow.innerHTML = cartRowContents
+    cart3.textContent = cartRow.innerText
+
+
+}
+
+/*
 // CHOIX 3 : LE CHOCOLAT
 
 let trois = document.getElementById("trois");
@@ -144,4 +181,6 @@ for (var i = 0; i < li3.length; i++) {
   });
 }
 
+
+*/
 
