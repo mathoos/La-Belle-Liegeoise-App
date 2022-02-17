@@ -233,20 +233,18 @@ h1{
 .flechePoint{
     width: 100%;
     height: 10em;
-    background-color: yellow;
 }
 
 .flechePoint img{
-    width: 10%;
+    width: 20%;
     height: 100%;
-    float: right;
     margin-right: 20%;
 }
 
 #ah{
     margin-left:  20%;
-    float: left;
-    transform: rotate(50deg);
+
+
 }
 
 
@@ -497,4 +495,67 @@ h3{
     height: 65%;
     font-size: .9em;
     text-align: right;;
+}
+
+
+
+
+#ajout-panier{
+    display: flex;
+    width: 100%;
+    height: 4em;
+    background-color: #572713;
+    color: #F6C68D;
+}
+#ajouter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60%;
+    height: 100%;
+}
+#ajouter p{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 60%;
+    font-style: italic;
+}
+#ajouter img{
+    width: 15%;
+    transform: rotate(5deg) translateX(50%)
+}
+#bouton-panier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    
+}
+#bouton-panier button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    outline: none;
+    border: none;
+    background-color: #F6C68D;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.336);
+    
+}
+#bouton-panier button p{
+    color:#572713;
+    font-weight: bolder;
+    margin: 0;
+    margin-right: 10%;
+}
+#bouton-panier button img{
+
+    height: 50%;
+    object-fit: contain;
 }
