@@ -1,3 +1,19 @@
+/* OUVRIR LE PANIER */
+
+let basket = document.getElementById("basket");
+let main = document.querySelector("main");
+
+basket.addEventListener("click", () => {
+  main.classList.add("main-visible")
+})
+
+let h3 = main.querySelector("h3");
+h3.addEventListener("click", () => {
+  main.classList.remove("main-visible")
+})
+
+
+
 /* AJOUTER LA GAUFRE AU PANIER */
 
 var button = document.getElementById("shop-item-button")
