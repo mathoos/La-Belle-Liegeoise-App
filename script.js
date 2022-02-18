@@ -16,20 +16,34 @@ function addItemToCart(cart1, cart2, cart3) {
     var cartRowContents = 
     `   
     <div class="img-gfr">
-      <img src="./pictogrammes/gaufrette.svg">
+      <img src="./images/Vector.svg">
     </div>
     <div class="items">
-      <span>${cart1}</span>
-      <span>${cart2}</span>
-      <span>${cart3}</span>
+      <span>- ${cart1}</span>
+      <span>- ${cart2}</span>
+      <span>- ${cart3}</span>
     </div>
     <div class="quantity">?</div>
-    <div class="bin">X</div>
+    <div class="bin-card">
+      <img class="bin" src="./pictogrammes/close.svg">
+    </div>
     `
     cartItems.append(cartRow)
     cartRow.innerHTML = cartRowContents
+    cartRow.getElementsByClassName('bin')[0].addEventListener('click', removeCartItem)
 }
 
+/* Le produit est supprimé du panier quand on clique sur la poubelle */
+var bin = document.getElementsByClassName('bin')
+for (var i = 0; i < bin.length; i++) {
+    var binButton = bin[i]
+    binButton.addEventListener('click', removeCartItem)
+    
+}
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+}
 
 
 // CHOIX 1 : LA PATE
