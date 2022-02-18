@@ -15,9 +15,16 @@ function addItemToCart(cart1, cart2, cart3) {
 
     var cartRowContents = 
     `   
+    <div class="img-gfr">
+      <img src="./pictogrammes/gaufrette.svg">
+    </div>
+    <div class="items">
       <span>${cart1}</span>
       <span>${cart2}</span>
       <span>${cart3}</span>
+    </div>
+    <div class="quantity">?</div>
+    <div class="bin">X</div>
     `
     cartItems.append(cartRow)
     cartRow.innerHTML = cartRowContents
@@ -54,12 +61,15 @@ function ajout() {
 
 function ajoutCart(title) {
     var cartRow = document.createElement('div')
-    var cart1 = document.getElementById('cart1')
+    cartRow.style.backgroundColor = "blue"
     var cartRowContents = 
     `
-      <span>${title}</span>    
+
+      <span>${title}</span> 
+   
     `
     cartRow.innerHTML = cartRowContents
+    var cart1 = document.getElementById('cart1')
     cart1.textContent = cartRow.innerText
 
 }
@@ -71,18 +81,18 @@ function ajoutCart(title) {
 var deux = document.getElementById("deux");
 var li2 = deux.querySelectorAll("ul > li");
 
-
 for (var i = 0; i < li2.length; i++) {
+  
   li2[i].addEventListener('click', function() {
     var active2 = document.getElementsByClassName("active2");
-    if (active2.length > 2) {
-      this.classList = this.classList.remove("active2");  
-    return;  
+    if (active2.length > 0) {
+      active2[0].className = active2[0].className.replace(" active2", "");
     }
-    this.classList.toggle("active2");
+    this.className += " active2";
     ajout2()
   }) 
 }
+
 
 function ajout2() {
   var button = li2[i]
@@ -153,3 +163,24 @@ function ajoutCart3(title) {
 
 
 
+
+
+
+
+/*
+
+for (var i = 0; i < li2.length; i++) {
+  li2[i].addEventListener('click', function() {
+    var active2 = document.getElementsByClassName("active2");
+    this.classList.toggle("active2");
+    if (active2.length > 3) {
+      alert("3 gourmandises max !")
+      this.classList = this.classList.remove("active2");       
+    return;  
+    }
+  
+    ajout2()
+  }) 
+}
+
+*/
