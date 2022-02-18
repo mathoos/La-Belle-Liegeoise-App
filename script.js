@@ -23,7 +23,9 @@ function addItemToCart(cart1, cart2, cart3) {
       <span>- ${cart2}</span>
       <span>- ${cart3}</span>
     </div>
-    <div class="quantity">?</div>
+    <div class="quantity">
+      <input type="number" min="1" value="1">
+    </div>
     <div class="bin-card">
       <img class="bin" src="./pictogrammes/close.svg">
     </div>

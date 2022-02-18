@@ -612,20 +612,34 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-radius: 50%;
 }
 
 .cart-row{
+    position: relative;
     display: flex;
+    justify-content: center;
     width: 100%;
     height: 5em;
-    border-bottom: #572713 solid 1px;
+    background: orange;
+}
+.cart-row::after{
+    position: absolute;
+    content: '';
+    width: 90%;
+    height: 1px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #572713;
 }
 .img-gfr{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 18.3%;
     height: 100%;
+    background-color: red;
 }
 .img-gfr img{
     width: 30%;
@@ -636,8 +650,9 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 40%;
+    width: 35%;
     height: 100%;
+    background-color: green;
 }
 .items span{
     font-size: .8em;
@@ -646,16 +661,26 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 18.3%;
     height: 100%;
+    background-color: blue;
 }
+.quantity input{
+    width: 35%;
+    height: fit-content;
+    outline: none;
+    border: none;
+    color: black;
+}
+
 .bin-card{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 18.3%;
     height: 100%;
     cursor: pointer;
+    background-color: pink;
 }
 .bin{
     width: 20%;
