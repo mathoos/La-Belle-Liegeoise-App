@@ -1,3 +1,7 @@
+/* RETOUR EN HAUT DE LA PAGE QUAND ON CLIQUE SUR AJOUTER AU PANIER */
+
+
+
 /* OUVRIR LE PANIER */
 
 let basket = document.getElementById("basket");
@@ -7,61 +11,10 @@ basket.addEventListener("click", () => {
   main.classList.add("main-visible")
 })
 
-let h3 = main.querySelector("h3");
-h3.addEventListener("click", () => {
+let closing = main.querySelector("#fermer-panier > p");
+closing.addEventListener("click", () => {
   main.classList.remove("main-visible")
 })
-
-
-
-/* AJOUTER LA GAUFRE AU PANIER */
-
-var button = document.getElementById("shop-item-button")
-  button.addEventListener("click", () => {
-    var cart1 = document.getElementById("cart1").innerText
-    var cart2 = document.getElementById("cart2").innerText
-    var cart3 = document.getElementById("cart3").innerText
-    addItemToCart(cart1, cart2, cart3)
-  })
-
-function addItemToCart(cart1, cart2, cart3) {
-    var cartRow = document.createElement("div")
-    cartRow.classList.add("cart-row")
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-
-    var cartRowContents = 
-    `   
-    <div class="img-gfr">
-      <img src="./images/Vector.svg">
-    </div>
-    <div class="items">
-      <span>- ${cart1}</span>
-      <span>- ${cart2}</span>
-      <span>- ${cart3}</span>
-    </div>
-    <div class="quantity">
-      <input type="number" min="1" value="1">
-    </div>
-    <div class="bin-card">
-      <img class="bin" src="./pictogrammes/close.svg">
-    </div>
-    `
-    cartItems.append(cartRow)
-    cartRow.innerHTML = cartRowContents
-    cartRow.getElementsByClassName('bin')[0].addEventListener('click', removeCartItem)
-}
-
-/* Le produit est supprimé du panier quand on clique sur la poubelle */
-var bin = document.getElementsByClassName('bin')
-for (var i = 0; i < bin.length; i++) {
-    var binButton = bin[i]
-    binButton.addEventListener('click', removeCartItem)
-    
-}
-function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
-}
 
 
 // CHOIX 1 : LA PATE
@@ -194,25 +147,67 @@ function ajoutCart3(title) {
 }
 
 
+/* AJOUTER LA GAUFRE AU PANIER */
+
+var button = document.getElementById("shop-item-button")
+  button.addEventListener("click", () => {
+    var cart1 = document.getElementById("cart1").innerText
+    var cart2 = document.getElementById("cart2").innerText
+    var cart3 = document.getElementById("cart3").innerText
+    addItemToCart(cart1, cart2, cart3)
+
+
+
+  })
 
 
 
 
+function addItemToCart(cart1, cart2, cart3) {
+    var cartRow = document.createElement("div")
+    cartRow.classList.add("cart-row")
+    var cartItems = document.getElementsByClassName('cart-items')[0]
 
-/*
-
-for (var i = 0; i < li2.length; i++) {
-  li2[i].addEventListener('click', function() {
-    var active2 = document.getElementsByClassName("active2");
-    this.classList.toggle("active2");
-    if (active2.length > 3) {
-      alert("3 gourmandises max !")
-      this.classList = this.classList.remove("active2");       
-    return;  
-    }
-  
-    ajout2()
-  }) 
+    var cartRowContents = 
+    `   
+    <div class="img-gfr">
+      <img src="./images/Vector.svg">
+    </div>
+    <div class="items">
+      <span>- ${cart1}</span>
+      <span>- ${cart2}</span>
+      <span>- ${cart3}</span>
+    </div>
+    <div class="quantity">
+      <input type="number" min="1" value="1">
+    </div>
+    <div class="bin-card">
+      <img class="bin" src="./pictogrammes/close.svg">
+    </div>
+    `
+    cartItems.append(cartRow)
+    cartRow.innerHTML = cartRowContents
+    cartRow.getElementsByClassName('bin')[0].addEventListener('click', removeCartItem)
 }
 
-*/
+/* Le produit est supprimé du panier quand on clique sur la poubelle */
+var bin = document.getElementsByClassName('bin')
+for (var i = 0; i < bin.length; i++) {
+    var binButton = bin[i]
+    binButton.addEventListener('click', removeCartItem)
+    
+}
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+}
+
+
+
+
+
+
+
+
+
+

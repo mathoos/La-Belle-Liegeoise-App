@@ -3,18 +3,41 @@
 }
 @font-face {
     font-family: 'haarlem_deco_demoregular';
-    src: url('./fonts/haarlem_deco_demo-webfont.woff2') format('woff2'),
-         url('./fonts/haarlem_deco_demo-webfont.woff') format('woff');
+    src: url('./fonts/haarlem deco/haarlem_deco_demo-webfont.woff2') format('woff2'),
+         url('./fonts/haarlem deco/haarlem_deco_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'commuters';
+    src: url('./fonts/commuters/fontspring-demo-commuterssans-bold-webfont.woff2') format('woff2'),
+         url('./fonts/commuters/fontspring-demo-commuterssans-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'commuters_sansheavy';
+    src: url('./fonts/commuters/fontspring-demo-commuterssans-heavy-webfont.woff2') format('woff2'),
+         url('./fonts/commuters/fontspring-demo-commuterssans-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-body{
+}
+@font-face {
+    font-family: 'commuters_sansextralight';
+    src: url('./fonts/commuters/fontspring-demo-commuterssans-extralight-webfont.woff2') format('woff2'),
+         url('./fonts/commuters/fontspring-demo-commuterssans-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body, html{
     margin: 0;
     font-family: 'Calibri';
     background-color: #572713;
     color: #572713;
+    scroll-behavior: smooth;
 }
 
 
@@ -22,7 +45,7 @@ body{
 
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     height: 20vh;
     background-color: #572713;
@@ -35,32 +58,22 @@ nav{
         transform: translateY(0)
     }
 }*/
-#arrow{
-    width: 1.7em;
-    height: 1.7em;
-    transform: rotate(180deg);
-    margin-left: 2.5%;
-    margin-top: 2.5%;
 
-}
-#arrow img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
 #basket{
+    position: relative;
     width: 1.7em;
     height: 1.7em;
     margin-right: 2.5%;
     margin-top: 2.5%;
-    cursor: pointer;
+    cursor: pointer; 
 }
+
 #basket img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    
+    object-fit: contain;  
 }
+
 /* HEADER */
 
 header{
@@ -72,7 +85,6 @@ header{
     width: 100%;
     background-color: #fff9eb;
     border-radius: 100px 100px 0 0;
-    border-top: dotted #572713 2px;
     box-sizing: border-box;
     /*transform: translateY(100%);
     animation: slide .8s ease forwards;
@@ -297,15 +309,16 @@ h1{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 3em;
+    margin-right: 2.5%;
+    font-family: 'commuters_sansextralight';
     
     
    
 }
 .numero p{
-    font-size: 1.5em;
-    font-weight: bolder;
+    font-size: 1.2em;
     margin: 0;
+    
 }
 .titre{
     display: flex;
@@ -318,8 +331,8 @@ h1{
 }
 h2{
     font-weight: bolder;
-    font-size: 1.5em;
-    font-family: 'Times New Roman';
+    font-size: 1.2em;
+    font-family: 'commuters_sansheavy';
 
 }
 .titre p{
@@ -567,9 +580,6 @@ h3{
     
 }
 #bouton-panier button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 50%;
     height: 50%;
     outline: none;
@@ -578,21 +588,18 @@ h3{
     box-sizing: border-box;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.336);
-    
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.336);  
 }
-#bouton-panier button p{
+#bouton-panier a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     color:#572713;
     font-weight: bolder;
-    margin: 0;
-    margin-right: 10%;
+    width: 100%;
+    height: 100%;
 }
-#bouton-panier button img{
-
-    height: 50%;
-    object-fit: contain;
-}
-
 
 main{
     position: fixed;
@@ -724,7 +731,9 @@ main{
     width: 90%;
     height: 3em;
     margin-top: 2em;
-    background-color: rgb(211, 145, 211);
+    color: #F6C68D;
+    background-color: #572713;
+    
 }
 #mon-total p{
     width: 20%;
@@ -735,4 +744,21 @@ main{
 #mon-total span{
     width: 10%;
     height:fit-content;
+}
+#fermer-panier{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    padding-right: 2.5%;
+}
+#fermer-panier p{
+    cursor: pointer;
+    text-decoration: underline 1px;
+    margin: 0;
+    height: fit-content;
+
 }
