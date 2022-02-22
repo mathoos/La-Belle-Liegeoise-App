@@ -1,19 +1,33 @@
-/* RETOUR EN HAUT DE LA PAGE QUAND ON CLIQUE SUR AJOUTER AU PANIER */
+/* CACHER NAVBAR AU SCROLL */
 
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("nav").style.bottom = "0";
+  } else {
+    document.querySelector("nav").style.bottom = "-10vh";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 
 /* OUVRIR LE PANIER */
 
 let basket = document.getElementById("basket");
 let main = document.querySelector("main");
+let nav = document.querySelector("nav")
 
 basket.addEventListener("click", () => {
-  main.classList.add("main-visible")
+  main.classList.add("main-visible");
+  nav.style.display = "none"
 })
 
 let closing = main.querySelector("#fermer-panier > p");
 closing.addEventListener("click", () => {
-  main.classList.remove("main-visible")
+  main.classList.remove("main-visible");
+  nav.style.display = "flex"
 })
 
 

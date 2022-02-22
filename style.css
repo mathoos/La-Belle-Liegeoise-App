@@ -44,33 +44,35 @@ body, html{
 /* Nav */
 
 nav{
+    position: sticky;
+    bottom: 0;
+    z-index: 50;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    height: 20vh;
-    background-color: #572713;
-    /*transform: translateY(-50%);
-    animation: slideDown .5s ease forwards 1s*/
-
+    height: 10vh;
+    background-color: #fff9eb;
+    border-top: #572713 1px solid;
+    transition: .5s ease;
 }
-/*@keyframes slideDown{
-    to{
-        transform: translateY(0)
-    }
-}*/
 
-#basket{
+
+#basket, #cookie, #user{
     position: relative;
-    width: 1.7em;
-    height: 1.7em;
-    margin-right: 2.5%;
-    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
     cursor: pointer; 
+    background-color: #F6C68D;
+    border-radius: 50%;
 }
 
-#basket img{
-    width: 100%;
-    height: 100%;
+#basket img, #cookie img, #user img{
+    width: 60%;
+    height: 60%;
     object-fit: contain;  
 }
 
@@ -86,15 +88,16 @@ header{
     background-color: #fff9eb;
     border-radius: 100px 100px 0 0;
     box-sizing: border-box;
-    /*transform: translateY(100%);
+    margin-top: 20vh;
+    transform: translateY(100%);
     animation: slide .8s ease forwards;
-    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);*/
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-/*@keyframes slide{
+@keyframes slide{
     to{
         transform: translateY(0)
     }
-}*/
+}
 #lavague{
     display: flex;
     align-items: flex-end;
@@ -193,17 +196,18 @@ h1{
 
 #flash img{
     position: absolute;
-    width: 15%;
-    height: 40%;
-    left: 0%;
-    top: -7%;
+    width: fit-content;
+    height: 100%;
+    left: 70%;
+    top: 20%;
     transform: rotate(10deg);
+
 
 }
 #flash img:nth-child(n+3){
 
     top: inherit;
-    left:inherit;
+    left: inherit;
     right: 20%;
     bottom: -20%;
     height: fit-content;
@@ -218,7 +222,6 @@ h1{
     text-align: right;
     margin: 0;
     padding: 0;
-    border-radius: 48% 52% 48% 52% / 50% 68% 32% 50%;
     padding: 5%;
     
 }
@@ -229,7 +232,7 @@ h1{
 
 }
 #flash p span:nth-child(n+3){
-    background-image: linear-gradient(to top, #F6C68D 40%, transparent -0%);
+    /*background-image: linear-gradient(to top, #F6C68D 40%, transparent -0%);*/
     font-weight: bolder;
     font-size: 1.5em;
     border-radius: 0;
@@ -283,14 +286,14 @@ h1{
     margin: auto;
     margin-bottom: 5em;
 }
-.bloc::after{
+/*.bloc::after{
     position: absolute;
     content: '';
     width: 95%;
     height: 1px;
     left: 2.5%;
     background-color: #572713;
-}
+}*/
 
 
 .up{
@@ -337,7 +340,7 @@ h2{
 }
 .titre p{
     font-style: italic;
-    font-size: .8em;
+    font-size: .7em;
     transform: rotate(4deg);
     margin-right: 5%;
     background-color: #F6C68D;
@@ -550,8 +553,9 @@ h3{
     display: flex;
     width: 100%;
     height: 4em;
-    background-color: #572713;
+
     color: #F6C68D;
+    background-color: #572713;
 }
 #ajouter{
     display: flex;
@@ -566,10 +570,12 @@ h3{
     margin: 0;
     height: 60%;
     font-style: italic;
+    text-align: center;
+    transform: translateY(10%)
 }
 #ajouter img{
     width: 15%;
-    transform: rotate(5deg) translateX(50%)
+    transform: rotate(5deg) translateX(60%)
 }
 #bouton-panier{
     display: flex;
@@ -588,7 +594,13 @@ h3{
     box-sizing: border-box;
     cursor: pointer;
     border-radius: 20px;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.336);  
+    
+}
+.croc{
+    background-image: url(./pictogrammes/crocs.svg);
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: 105% -10%
 }
 #bouton-panier a{
     display: flex;
@@ -624,7 +636,7 @@ main{
     align-items: center;
     width: 100%;
     height: 5em;
-    border-bottom: #572713 1px dashed;
+    border-bottom: #572713 1px solid;
     background-color:#F6C68D;
     margin-bottom: 2em;
 }
